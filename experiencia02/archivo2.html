@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiencia 02 - Formulario de Contacto</title>
+    <style>
+        .titulo {
+            color: #c80000;
+            text-align: center;
+        }
+        /* Aplicar estilo básico al formulario */
+        .form-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: auto;
+            padding: 2em;
+            border: 2px solid #c80000;
+            border-radius: 2em;
+            max-width: 800px;
+        }
+        form {
+            width: 60%; /* Ajuste del ancho del formulario */
+        }
+        .contenido {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        form li + li {
+            margin-top: 1.5em;
+        }
+        label {
+            /* Tamaño y alineación uniforme */
+            display: inline-block;
+            width: 120px;
+            text-align: right;
+        }
+        input,
+        textarea {
+            /* Asegurar que todos los campos de texto tienen la misma configuración de letra */
+            font: 1em sans-serif;
+            /* Tamaño uniforme del campo de texto */
+            width: 300px;
+            box-sizing: border-box;
+            /* Hacer coincidir los bordes del campo del formulario */
+            border: 2px solid #000000;
+        }
+        input:focus,
+        textarea:focus {
+            /* Destacado adicional para elementos que tienen el cursor */
+            border-color: #000;
+        }
+        textarea {
+            /* Alinear los campos de texto multilínea con sus etiquetas */
+            vertical-align: top;
+            /* Proporcionar espacio para escribir texto */
+            height: 5em;
+        }
+        .button {
+            /* Alinear los botones con los campos de texto */
+            padding-left: 120px; /* mismo tamaño que los elementos de la etiqueta */
+        }
+        button {
+            /* Margen adicional para el botón */
+            margin-left: .5em;
+            background-color: #c80000;
+            color: white;
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .logo-container {
+            width: 35%; 
+            text-align: center;
+        }
+        .logo-container img {
+            max-width: 90%;
+            height: auto;
+            margin-right: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="titulo">Formulario de contacto</h1>
+    <div class="form-container">
+        <form action="/my-handling-form-page" method="post">
+            <ul class="contenido">
+                <li>
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="user_name" placeholder="Ingrese su nombre...">
+                </li>
+                <li>
+                    <label for="mail">Correo electrónico:</label>
+                    <input type="email" id="mail" name="user_mail" placeholder="Ingrese su correo...">
+                </li>
+                <li>
+                    <label for="msg">Mensaje:</label>
+                    <textarea id="msg" name="user_message" placeholder="Escriba su mensaje..."></textarea>
+                </li>
+                <li class="button">
+                    <button type="submit">Envíe su mensaje</button>
+                </li>
+            </ul>
+        </form>
+        <div class="logo-container">
+            <img src="escudo.png" alt="Logo de la Universidad">
+        </div>
+    </div>
+</body>
+</html>
