@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <form action="" method="post">
+        <ul>
+            <li>
+              <label for="name">Nombre: </label>
+              <input id="name" name="user_name" type="text" required minlength="3" value="Ingrese su nombre....."/>
+            </li>
+            <li>
+              <label for="mail">Correo electrónico: </label>
+              <input id="mail" name="user_mail" type="email" required  value="Ingrese correo electrónico...."/>
+            </li>
+            <li>
+              <label for="msg">Mensaje:  </label>
+              <textarea id="msg" name="user_message" required>Escribe tu mensaje....</textarea>
+            </li>
+        </ul>
+
+        <li class="button">
+            <button type="submit">Enviar mensaje.</button>
+        </li>
+    </form>
+</body>
+</html>
